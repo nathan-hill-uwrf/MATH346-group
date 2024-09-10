@@ -1,4 +1,4 @@
-# MATH346-group
+# MATH346 Team Purple
 ## Members
 - Nathan
 - Ben
