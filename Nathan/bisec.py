@@ -1,7 +1,7 @@
 import math
 
 # Set your function
-f = "x**2 - 3"
+f = "math.sqrt(x) - math.cos(x)"
 
 
 # Set a tolerance
@@ -24,8 +24,12 @@ def bisec(a,b):
     elif (fun(a)<tol or fun(b)<tol):
         print('root already on interval maxima')
     c = (a+b)/2
+    psubx = 1
     while (abs(fun(c)) > tol):
         c = (a+b)/2
+        psubx += 1
+        if (2 < psubx < 6):
+            print('p' + str(psubx), ' = ', c)
         if (fun(c)>0):
             a = c
         else:
@@ -34,4 +38,4 @@ def bisec(a,b):
     print('root of f(x): ', c)
 
 
-bisec(0,5)
+bisec(0,1)
