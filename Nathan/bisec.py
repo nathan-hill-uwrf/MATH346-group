@@ -1,13 +1,11 @@
-
-
 import math
 
 # Set your function
-f = "math.sin(x) + .7"
+f = "x**2 - 3"
 
 
 # Set a tolerance
-tol = 1*(10**-4)
+tol = 1*(10**-6)
 
 # Call this to fill in value for x
 def fun(x):
@@ -27,17 +25,13 @@ def bisec(a,b):
         print('root already on interval maxima')
     c = (a+b)/2
     while (abs(fun(c)) > tol):
-        print(a)
-        print(b)
         c = (a+b)/2
         if (fun(c)>0):
             a = c
         else:
             b = c
-        print(fun(c))
 
     print('root of f(x): ', c)
-    print(fun(c))
 
 
-bisec(-2,0)
+bisec(0,5)
