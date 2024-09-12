@@ -11,11 +11,13 @@ search2 = "TATA"
 search1found = 0
 search2found = 0
 
+# added a '-2' to the range because we are always looking 2 out
 for i in range( size - 2 ):
     subseq = [ dna_array[i] , dna_array[i+1] , dna_array[i+2] ]
     subseq1 = ''.join( subseq )
     if ( subseq1 == search1):
         search1found = search1found + 1
+# added an if and '-3' to size for our larger search term
     if ( i < size - 3 ):
         subseq.append( dna_array[i+3] )
         subseq2 = ''.join( subseq )
